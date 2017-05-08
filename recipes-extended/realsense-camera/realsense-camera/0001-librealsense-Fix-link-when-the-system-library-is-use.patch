@@ -6,6 +6,9 @@ Subject: [PATCH 3/3] librealsense: Fix link when the system library is used
 Otherwise librealsense won't be listed as a dependency for the nodelet
 that will fail to load due to undefined symbols.
 
+Upstream-Status: Accepted (expected in v1.8.1)
+    [https://github.com/intel-ros/realsense/pull/226]
+
 Signed-off-by: Murilo Belluzzo <murilo.belluzzo@intel.com>
 
 diff --git a/CMakeLists.txt b/CMakeLists.txt

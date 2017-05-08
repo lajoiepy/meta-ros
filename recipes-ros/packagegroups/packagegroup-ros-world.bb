@@ -7,6 +7,7 @@ PACKAGES = "${PN}"
 
 RDEPENDS_${PN} = "\
     packagegroup-ros-comm \
+    packagegroup-ros-kobuki \
     actionlib \
     bond \
     bondcpp \
@@ -37,6 +38,7 @@ RDEPENDS_${PN} = "\
     tf2-msgs \
     tf2-py \
     tf2-ros \
+    tf2-sensor-msgs \
     tf2-tools \
     eigen-conversions \
     kdl-conversions \
@@ -65,6 +67,8 @@ RDEPENDS_${PN} = "\
     hardware-interface \
     joint-limits-interface \
     transmission-interface \
+    collada-parser \
+    collada-urdf \
     kdl-parser \
     resource-retriever \
     urdf-parser-plugin \
@@ -96,7 +100,6 @@ RDEPENDS_${PN} = "\
     image-rotate \
     stereo-image-proc \
     random-numbers \
-    shape-tools \
     octomap-msgs \
     pcl-msgs \
     laser-geometry \
@@ -172,11 +175,23 @@ RDEPENDS_${PN} = "\
     rosbridge-server \
     rosbridge-suite \
     ar-track-alvar \
+    ar-track-alvar-msgs \
+    moveit-core \
+    moveit-msgs \
+    moveit-ros-perception \
     moveit-ros-planning \
+    mavros-msgs \
+    cv-camera \
+    object-recognition-msgs \
+    srdfdom \
+    libmavconn \
+    mavros \
+    mavros-extras \
+    mavlink \
 "
 
-# collada-parser and collada-urdf require collada-dom, which does not compile with gcc6.
+# urdfdom-headers is an empty deploy package.
 # image-view requires gtk+, but it cannot be found by cmake for some reason.
 # sound-play requires python-gst (which is not available in any layers' master branch)
-# joint-state-publisher still has some issues.
+# joint-state-publisher requires opengl distro feature and has further issues building.
 # freenect-camera and freenect-launch requires opengl distro feature.

@@ -4,13 +4,13 @@ LIC_FILES_CHKSUM = "file://package.xml;beginline=15;endline=17;md5=9b511d4c606b1
 
 DEPENDS = " \
     boost \
-    mavlink \
+    ros-mavlink \
     console-bridge \
 "
 
 RDEPENDS_${PN} = " \
     boost \
-    mavlink \
+    ros-mavlink \
     console-bridge \
 "
 

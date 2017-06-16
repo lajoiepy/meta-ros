@@ -1,12 +1,13 @@
 DESCRIPTION = "ROS package for BUZZ programming language."
 LICENSE = "MIT"
+LIC_FILES_CHKSUM = "file://package.xml;md5=b18227f996fd8967f686234797145565"
 
-DEPENDS = "roscpp std_msgs mavros_msgs sensor_msgs message_generation"
-RDEPENDS_${PN} = "roscpp std_msgs mavros_msgs sensor_msgs message_runtime"
+DEPENDS = "roscpp std-msgs mavros-msgs sensor-msgs message-generation"
+RDEPENDS_${PN} = "roscpp std-msgs mavros-msgs sensor-msgs message-runtime"
 
-SRC_URI = "https://github.com/MISTLab/ROSBuzz/archive/${PV}.tar.gz"
+SRC_URI = "file://rosbuzz-0.1.0.tar.gz"
 
-S = "${WORKDIR}/rosbuzz-${PV}/rosbuzz"
+S = "${WORKDIR}/rosbuzz-0.1.0"
 
 inherit catkin
 

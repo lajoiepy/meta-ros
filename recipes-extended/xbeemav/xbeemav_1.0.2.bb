@@ -1,13 +1,13 @@
 DESCRIPTION = "ROS package for XBee."
 LICENSE = "BSL"
-LIC_FILES_CHKSUM = "file://package.xml;md5=d91b46a600ec938a7dc7c000ed51cfd7"
+LIC_FILES_CHKSUM = "file://package.xml;md5=2a3c3d052a7babce3d69b28c628f845b"
 
 DEPENDS = "roscpp std-msgs"
 RDEPENDS_${PN} = "roscpp std-msgs"
 
-SRC_URI = "file://xbeemav1.0.2.tar.gz"
+SRC_URI = "file://xbeemav-1.0.2.tar.gz"
 
-S = "${WORKDIR}/xbeemav-${PV}/xbeemav"
+S = "${WORKDIR}/xbeemav-${PV}"
 
 inherit catkin
 
